@@ -24,3 +24,8 @@ export const adminLogin      = (creds)  => API.post('/auth/login', creds);
 export const getAdminProfile = ()       => API.get('/auth/me');
 
 export default API;
+
+// ── Settings ───────────────────────────────────────────
+export const fetchSettings     = ()       => API.get('/settings');
+export const updateSettings    = (data)   => API.put('/settings', data);
+export const updateAdminProfile = (data)  => API.put('/settings/profile', data);

@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { fetchBooks, deleteBook, fetchOrders, updateOrderStatus, deleteOrder } from '../services/api';
 import toast from 'react-hot-toast';
-import { MdMenuBook, MdAdd, MdEdit, MdDelete, MdLogout } from 'react-icons/md';
+import { MdMenuBook, MdAdd, MdEdit, MdDelete, MdLogout, MdSettings } from 'react-icons/md';
 import { FaBoxOpen } from 'react-icons/fa';
 import './AdminDashboard.css';
 
@@ -70,6 +70,9 @@ const AdminDashboard = () => {
               <span className="admin-badge">{orders.filter((o) => o.status === 'Pending').length}</span>
             )}
           </button>
+          <Link to="/admin/settings" className="admin-nav-btn" style={{textDecoration:'none'}}>
+            <MdSettings /> Settings
+          </Link>
         </nav>
         <button className="admin-logout-btn" onClick={handleLogout}><MdLogout /> Logout</button>
       </aside>

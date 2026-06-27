@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminBookForm from './pages/AdminBookForm';
+import AdminSettings from './pages/AdminSettings';
 
 import './index.css';
 
@@ -51,6 +52,7 @@ function App() {
           <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
           <Route path="/admin/books/add" element={<ProtectedRoute><AdminBookForm /></ProtectedRoute>} />
           <Route path="/admin/books/edit/:id" element={<ProtectedRoute><AdminBookForm /></ProtectedRoute>} />
+          <Route path="/admin/settings" element={<ProtectedRoute><AdminSettings /></ProtectedRoute>} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>

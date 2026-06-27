@@ -1,0 +1,21 @@
+.admin-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse 60% 60% at 50% 40%, rgba(46,204,113,0.06) 0%, transparent 70%);
+}
+
+.admin-login__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.admin-login__logo { height: 32px; margin-bottom: 28px; }
+.admin-login__title { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+.admin-login__sub { font-size: 14px; color: var(--text-secondary); margin-bottom: 32px; }
+.admin-login__btn { width: 100%; justify-content: center; padding: 14px; margin-top: 8px; }

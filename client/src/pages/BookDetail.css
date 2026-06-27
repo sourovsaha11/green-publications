@@ -1,0 +1,90 @@
+.book-detail-page { padding: 100px 0 80px; }
+.book-detail-loading { min-height: 60vh; display: flex; align-items: center; justify-content: center; color: var(--text-muted); }
+
+.book-detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  transition: color 0.2s;
+}
+.book-detail-back:hover { color: var(--accent-green); }
+
+.book-detail__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.book-detail__cover-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+}
+
+.book-detail__cover { width: 100%; }
+.book-detail__cover-placeholder {
+  aspect-ratio: 3/4;
+  background: linear-gradient(135deg, #1a2e1a, #0d1f0d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-green);
+  font-size: 64px;
+}
+
+.book-detail__title {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.book-detail__title-bn { font-size: 18px; color: var(--text-secondary); margin-bottom: 8px; }
+.book-detail__author { font-size: 15px; color: var(--text-secondary); margin-bottom: 16px; }
+.book-detail__price { font-size: 28px; font-weight: 700; color: var(--accent-green); margin-bottom: 16px; }
+.book-detail__description { font-size: 14px; color: var(--text-secondary); line-height: 1.75; }
+
+/* Order form */
+.book-detail__order {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+}
+
+.book-detail__order-title { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+.book-detail__order-sub { font-size: 13px; color: var(--text-secondary); margin-bottom: 24px; }
+
+.payment-info {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-green);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.payment-info__label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+.payment-info__number { font-size: 22px; font-weight: 700; color: var(--accent-green); margin: 4px 0; }
+.payment-info__methods { font-size: 12px; color: var(--text-muted); }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.order-form__total {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.order-form__total strong { color: var(--accent-green); font-size: 18px; }
+
+.order-form__submit { width: 100%; justify-content: center; padding: 14px; font-size: 15px; }
+
+@media (max-width: 900px) {
+  .book-detail__grid { grid-template-columns: 1fr; gap: 32px; }
+  .form-row { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,118 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 14px 0;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar--scrolled {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 8px 0;
+  border-bottom-color: var(--border);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar__logo { display: flex; align-items: center; }
+.navbar__logo-img { height: 52px; width: auto; object-fit: contain; }
+
+.navbar__links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  margin-left: auto;
+}
+
+.navbar__link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 2px;
+  background: var(--accent-green);
+  transition: width 0.25s ease;
+  border-radius: 1px;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--text-primary);
+}
+
+.navbar__link:hover::after,
+.navbar__link--active::after { width: 100%; }
+
+.navbar__social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 17px;
+  color: var(--text-muted);
+}
+
+.navbar__social a:hover { color: var(--accent-green); transition: color 0.2s; }
+
+.navbar__hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 24px;
+  margin-left: auto;
+}
+
+.navbar__mobile {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-secondary);
+  padding: 16px 24px;
+  gap: 4px;
+  border-top: 1px solid var(--border);
+}
+
+.navbar__mobile-link {
+  padding: 8px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar__mobile-link:last-child { border-bottom: none; }
+
+@media (max-width: 768px) {
+  .navbar__links, .navbar__social { display: none; }
+  .navbar__hamburger { display: block; }
+}
+
+.navbar__mobile-socials {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0 4px;
+}
+
+.navbar__mobile-socials a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.navbar__mobile-socials a:hover { color: var(--accent-green); }

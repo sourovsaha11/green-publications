@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { fetchBooks } from '../services/api';
 import BookCard from '../components/books/BookCard';
 import { HiArrowRight } from 'react-icons/hi';
-import { MdMenuBook, MdCheckCircle, MdLocalShipping } from 'react-icons/md';
+import { MdMenuBook, MdLocalShipping } from 'react-icons/md';
 import { BsCashCoin } from 'react-icons/bs';
 import './Home.css';
 
